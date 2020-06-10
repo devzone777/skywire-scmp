@@ -20,8 +20,9 @@ New features and utilities are actively being developed and will be added
 Copy or move all binaries into /usr/local/bin
 
 
-***Install Go
+***Install Go***
 Skywire supports go1.10+
 
-***Go 1.10+ Installation and Setup
+***Go 1.10+ Installation and Setup***
+
 [Golang 1.10+ Installation/Setup](https://github.com/devzone777/skycoin/blob/develop/INSTALLATION.md)
