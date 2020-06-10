@@ -12,6 +12,8 @@ Run:
 
 ```activevisors```
 
+```getkeypair```
+
 It is recommended that you use "grep" and or something like "jq" to enhance the output of activevisors
 
 New features and utilities are actively being developed and will be added
