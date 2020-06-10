@@ -7,7 +7,7 @@ This package provides the **SCMP** (Skywire Control Management Protocol) network
  - visorverify >>>> Verifies if a visor pubkey is active on the Skywire network or not
  - visorcount >>>> Displays the number of visors currently active on the Skywire network
  - activevisors >>> Returns a list of all visors currently active on the Skywire network
- - getkeypair >>>> Generates a new Skywire Pubkey and SecKey
+ - genkeypair >>>> Generates a new Skywire Pubkey and SecKey
 
 ## Usage
 Run:
@@ -18,7 +18,7 @@ Run:
 
 ```activevisors```
 
-```getkeypair```
+```genkeypair```
 
 It is recommended that you use "grep" and or something like "jq" to enhance the output of activevisors
 
