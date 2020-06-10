@@ -27,5 +27,5 @@ func main() {
 	if err != nil {
 		log.Fatalf("cmd.Run() failed with %s\n", err)
 	}
-        fmt.Println(c)
+
 }

@@ -32,12 +32,6 @@ resp, err := http.Get("https://uptime-tracker.skywire.skycoin.com/visors")
         log.Fatal(err)
     }
 
-    //s, _ := json.MarshalIndent(c, "", "\t")
-
-    //fmt.Printf("%+v\n", c)
-    //fmt.Println(string(s))
-    //arraySize := len(s)
-
     fmt.Println("\033[32mActive visor count =", len(c))
     fmt.Println("\033[0m")
 }

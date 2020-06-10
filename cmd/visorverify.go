@@ -1,17 +1,10 @@
 package main
 
 import (
-    //"github.com/go-validator/validator"
-    //"gopkg.in/validator.v2"
     "encoding/json"
     "io/ioutil"
     "net/http"
     "strings"
-    //"errors"
-
-    //"reflect"
-    //"unsafe"
-    //"bytes"
 
     "flag"
     "fmt"
@@ -64,16 +57,7 @@ func main() {
     // Set flags
     flag.Parse()
 
-    // Verify valid pk and convert struct to string
-    //var vpk []visorKey
-    //err = json.Unmarshal(pk, &vpk)
-    //if err != nil {
-        //log.Fatal(err)
-    //}
-    
-    //cvpk := string(vpk)
-
-    //fmt.Println("len(s)", len(s))
+    // Verify valid pk
     l := len(pk)
     if l != 66 {
             log.Fatal(err)
@@ -85,7 +69,7 @@ func main() {
         fmt.Println("\033[0m")
         } else {
         fmt.Println("\033[32mVisor is NOT active")
-        fmt.Println("\033[0m")
+        //fmt.Println("\033[0m")
     }
     fmt.Println("\033[0m")
 }
