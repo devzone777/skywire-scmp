@@ -20,7 +20,7 @@ New features and utilities are actively being developed and will be added
 
 ### Installation
 
-```go build```
+```make build```
 
 Copy or move all binaries into /usr/local/bin
 
