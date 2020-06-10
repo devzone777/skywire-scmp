@@ -3,6 +3,12 @@ Network utilities for Skywire Mainnet
 
 This package provides the **SCMP** (Skywire Control Management Protocol) network level utilities for network engineers and developers to rapidly troubleshoot Skywire network issues and integrate Skywire into network monitoring applications. 
 
+## Commands
+ - visorverify    Verifies if a visor pubkey is active on the Skywire network or not
+ - visorcount     Displays the number of visors currently active on the Skywire network
+ - activevisors   Returns a list of all visors currently active on the Skywire network
+ - getkeypair     Generates a new Skywire Pubkey and SecKey
+
 ## Usage
 Run:
 
