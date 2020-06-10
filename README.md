@@ -5,6 +5,7 @@ This package provides the **SCMP** (Skywire Control Management Protocol) network
 
 ## Usage
 Run:
+
 ```visorverify -k <pubkey>```
 
 ```visorcount```
@@ -16,7 +17,9 @@ It is recommended that you use "grep" and or something like "jq" to enhance the 
 New features and utilities are actively being developed and will be added
 
 ### Installation
+
 ```go build```
+
 Copy or move all binaries into /usr/local/bin
 
 
