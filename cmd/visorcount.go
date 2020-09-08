@@ -14,7 +14,7 @@ type activeVisors struct {
 }
 
 func main() {
-resp, err := http.Get("https://uptime-tracker.skywire.skycoin.com/visors")
+resp, err := http.Get("https://uptime-tracker.skywire.skycoin.com/uptimes")
     if err != nil {
         log.Fatal(err)
     }
