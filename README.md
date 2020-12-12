@@ -1,4 +1,4 @@
-# skywire-utils
+# skywire-scmp
 Network utilities for Skywire Mainnet
 
 This package provides the **SCMP** (Skywire Control Management Protocol) network level utilities for network engineers and developers to rapidly troubleshoot Skywire network issues and integrate Skywire into network monitoring applications. 
