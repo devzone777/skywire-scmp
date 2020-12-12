@@ -1,11 +1,11 @@
 // Package cipher implements common golang encoding interfaces for
-// github.com/SkycoinProject/skycoin/src/cipher
+// github.com/Skycoin/skycoin/src/cipher
 package main
 
 import (
         "fmt"
 
-        "github.com/SkycoinProject/dmsg/cipher"
+        "github.com/Skycoin/dmsg/cipher"
 )
 
 func main() {

@@ -6,7 +6,7 @@ build: deps bin ## Install dependancies and Build binaries
 
 #Dependancies
 deps: ## Install dependancies
-	go get github.com/SkycoinProject/dmsg/cipher
+	go get github.com/Skycoin/dmsg/cipher
 
 #Bin
 bin: ## Build `activevisors`, `visorcount`, `visorverify`
