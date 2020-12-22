@@ -7,7 +7,7 @@ import (
     //"os"
     "flag"
     "os/exec"
-    //"strings"
+    "strings"
     //"bufio"
 )
 
@@ -36,7 +36,28 @@ func main() {
     flag.Parse()
     
     s := fmt.Sprint(out)
-    
-    fmt.Println(s)
+    ss := string(s)
+    sf := strings.Fields(ss)
+    fmt.Println("ssid 1 length: ", len(sf[1]))
+    if len(sf[1])==40 {
+        fmt.Println("\033[36m1. \033[32m", sf[1])
+    }
+    fmt.Println("\033[0mssid 2 length: ", len(sf[2]))
+    if len(sf[2])==40 {
+        fmt.Println("\033[36m2. \033[32m", sf[2])
+    }
+    fmt.Println("\033[0mssid 3 length: ", len(sf[3]))
+    if len(sf[3])==40 {
+        fmt.Println("\033[36m3. \033[32m", sf[3])
+    }
+    fmt.Println("\033[0mssid 4 length: ", len(sf[4]))
+    if len(sf[4])==40 {
+        fmt.Println("\033[36m4. \033[32m", sf[4])
+    }
+    fmt.Println("\033[0mssid 5 length: ", len(sf[5]))
+    if len(sf[5])==40 {
+        fmt.Println("\033[36m5. \033[32m", sf[5])
+        fmt.Println("\033[0m")
+    }
     
 }
