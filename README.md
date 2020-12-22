@@ -8,17 +8,23 @@ This package provides the **SCMP** (Skywire Control Management Protocol) network
  - visorcount >>>> Displays the number of visors currently active on the Skywire network
  - activevisors >>> Returns a list of all visors currently active on the Skywire network
  - genkeypair >>>> Generates a new Skywire Pubkey and SecKey
+ - skywire-scan >>> Returns a list of available Skywire networks
+ - wifi-scan >>>> Returns a list of available wifi networks
 
 ## Usage
 Run:
 
-```visorverify -k <pubkey>```
+```./visorverify -k <pubkey>```
 
-```visorcount```
+```./visorcount```
 
-```activevisors```
+```./activevisors```
 
-```genkeypair```
+```./genkeypair```
+
+```./skywire-scan -i <wifi interface i.e wlan0, wlan1, etc>```
+
+```./wifi-scan -i <wifi interface i.e. wlan0, wlan1, etc>```
 
 It is recommended that you use "grep" and or something like "jq" to enhance the output of activevisors
 
