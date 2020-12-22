@@ -14,6 +14,8 @@ bin: ## Build `activevisors`, `visorcount`, `visorverify`
 	go build -o ./visorcount  ./cmd/visorcount.go
 	go build -o ./visorverify ./cmd/visorverify.go
 	go build -o ./genkeypair ./cmd/genkeypair.go
+	go build -o ./skywire-scan ./cmd/skywire-scan.go
+	go build -o ./wifi-scan ./cmd/wifi-scan.go
 
 #Clean
 clean: ## Remove binaries
@@ -21,3 +23,5 @@ clean: ## Remove binaries
 	rm -fR ./visorcount
 	rm -fR ./visorverify
 	rm -fR ./genkeypair
+	rm -fR ./skywire-scan
+	rm -fR ./wifi-scan
