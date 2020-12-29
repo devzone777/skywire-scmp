@@ -10,7 +10,7 @@ This package provides the **SCMP** (Skywire Control Management Protocol) network
  - genkeypair >>>> Generates a new Skywire Pubkey and SecKey
  - skywire-scan >>> Returns a list of available Skywire networks
  - wifi-scan >>>> Returns a list of available wifi networks
-
+ - ***Network address management in active development***
 ## Usage
 Run:
 
