@@ -1,7 +1,7 @@
 package main
 
 import (
-	"time"
+	    "time"
         "fmt"
         "os"
         "github.com/skycoin/skycoin/src/cipher/base58"
@@ -67,12 +67,6 @@ func main() {
 	
 
 	fmt.Println("Parent Skycoin Address: ", addr)
-
-	//Debug output
-	//arg2 := ""
-	//if (os.Args != nil && len(os.Args) > 2) {
-        	//arg2 = os.Args[2]
-	//}
 
 	if arg2 == "debug" {
 		fmt.Println("Parent Skycoin Address Length", len(addr))
