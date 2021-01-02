@@ -22,14 +22,22 @@ func main() {
 
 	//Take address from cmd argument
 	addr := os.Args[1]
-	
+
+	//Handle debug args
+	arg2 := ""
+	if (os.Args != nil && len(os.Args) > 2) {
+                arg2 = os.Args[2]
+        }
+
+
 	//Decode base 58 address to hexadecimal bytes
 	dba, _ := base58.Decode(addr)
 
 	//Check length of Skycoin address
 	salen := fmt.Sprint(len(addr))
-	fmt.Println("Input address length", salen)
-
+	if arg2 == "debug" {
+		fmt.Println("\033[32m<------Input address info------>\033[0m\nInput address length: ", salen)
+	}
 	conv1 := dba
 
 	//Handle address length
@@ -47,17 +55,34 @@ func main() {
 			}
 		}
 	}
+	
+	//Debug output
+	if arg2 == "debug" {
+		fmt.Println("Input address hexbytes: ", dba)
+	}
 
-	fmt.Println(dba)
-
+	//Status
 	fmt.Println("\033[32mGenerating new Auxillary Address\033[0m")
 	time.Sleep(2 * time.Second)
 	
 
 	fmt.Println("Parent Skycoin Address: ", addr)
-	fmt.Println("Parent Skycoin Address Length", len(addr))
-	fmt.Println("New Auxillary address : ", base58.Encode(conv1))
-	fmt.Println("Auxillary Address Length", len(base58.Encode(conv1)))
 
+	//Debug output
+	//arg2 := ""
+	//if (os.Args != nil && len(os.Args) > 2) {
+        	//arg2 = os.Args[2]
+	//}
+
+	if arg2 == "debug" {
+		fmt.Println("Parent Skycoin Address Length", len(addr))
+	} else {}
+
+	fmt.Println("New Auxillary address : ", base58.Encode(conv1))
+
+	//Debug output
+	if arg2 == "debug" {
+		fmt.Println("Auxillary Address Length", len(base58.Encode(conv1)))
+	} else {}
 }
 
