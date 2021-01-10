@@ -58,6 +58,28 @@ func main() {
     if len(sf[5])==40 {
         fmt.Println("\033[36m5. \033[32m", sf[5])
         fmt.Println("\033[0m")
+    }/*
+    fmt.Println("ssid 6 length: ", len(sf[6]))
+    if len(sf[6])==40 {
+        fmt.Println("\033[36m6. \033[32m", sf[6])
     }
+    fmt.Println("\033[0mssid 7 length: ", len(sf[7]))
+    if len(sf[7])==40 {
+        fmt.Println("\033[36m7. \033[32m", sf[7])
+    }
+    fmt.Println("\033[0mssid 8 length: ", len(sf[8]))
+    if len(sf[8])==40 {
+        fmt.Println("\033[36m8. \033[32m", sf[8])
+    }
+    fmt.Println("\033[0mssid 9 length: ", len(sf[9]))
+    if len(sf[9])==40 {
+        fmt.Println("\033[36m9. \033[32m", sf[9])
+    }
+    fmt.Println("\033[0mssid 10 length: ", len(sf[10]))
+    if len(sf[10])==40 {
+        fmt.Println("\033[36m10. \033[32m", sf[10])
+        fmt.Println("\033[0m")
+    }*/
     
 }
+//fmt.Println("\033[0m")
