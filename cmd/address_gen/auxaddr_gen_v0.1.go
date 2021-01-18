@@ -1,22 +1,19 @@
 package main
 
 import (
-	    "time"
-        "fmt"
-        "os"
-        "github.com/skycoin/skycoin/src/cipher/base58"
+	"fmt"
+	"os"
+	"time"
 
+	"github.com/skycoin/skycoin/src/cipher/base58"
 )
 
-// Note: If the expected result is a message, then convert the base58 string 
-//       to binary or hexadecimal and use the desired coding table 
-//       (ASCII or Unicode) to obtain a plain message. 
+// Note: If the expected result is a message, then convert the base58 string
+//       to binary or hexadecimal and use the desired coding table
+//       (ASCII or Unicode) to obtain a plain message.
 //
 //       In this case we must decode the Skycoin address (base58 string)
-//       to hexadecimal. 
-
-
-
+//       to hexadecimal.
 
 func main() {
 
@@ -25,10 +22,9 @@ func main() {
 
 	//Handle debug args
 	arg2 := ""
-	if (os.Args != nil && len(os.Args) > 2) {
-                arg2 = os.Args[2]
-        }
-
+	if os.Args != nil && len(os.Args) > 2 {
+		arg2 = os.Args[2]
+	}
 
 	//Decode base 58 address to hexadecimal bytes
 	dba, _ := base58.Decode(addr)
@@ -48,14 +44,14 @@ func main() {
 			conv1 = dba[:len(dba)-2]
 		} else {
 			if salen == "33" {
-			//dba[24] = dba[23]
-			//conv1 = dba[:len(dba)]
-			
-			conv1 = dba[:len(dba)-1]
+				//dba[24] = dba[23]
+				//conv1 = dba[:len(dba)]
+
+				conv1 = dba[:len(dba)-1]
 			}
 		}
 	}
-	
+
 	//Debug output
 	if arg2 == "debug" {
 		fmt.Println("Input address hexbytes: ", dba)
@@ -64,19 +60,19 @@ func main() {
 	//Status
 	fmt.Println("\033[32mGenerating new Auxillary Address\033[0m")
 	time.Sleep(2 * time.Second)
-	
 
 	fmt.Println("Parent Skycoin Address: ", addr)
 
 	if arg2 == "debug" {
 		fmt.Println("Parent Skycoin Address Length", len(addr))
-	} else {}
+	} else {
+	}
 
-	fmt.Println("New Auxillary address : ", base58.Encode(conv1))
+	fmt.Println("New Auxillary address: ", base58.Encode(conv1))
 
 	//Debug output
 	if arg2 == "debug" {
 		fmt.Println("Auxillary Address Length", len(base58.Encode(conv1)))
-	} else {}
+	} else {
+	}
 }
-

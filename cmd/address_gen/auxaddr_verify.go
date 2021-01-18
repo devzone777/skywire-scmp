@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"regexp"
 	"time"
 
 	"github.com/skycoin/skycoin/src/cipher"
@@ -35,6 +36,7 @@ func main() {
 
 	hbl := len(aux2hb)
 	rmdvb := aux2hb
+	regex := regexp.MustCompile(`[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{26,35}`)
 	if hbl == 23 {
 		hbl = len(aux2hb)
 		rmdvb := aux2hb[:len(aux2hb)-2]
@@ -42,7 +44,11 @@ func main() {
 		chk := rpvh[:4]
 		rpvc := append(rmdvb, chk...)
 		paddr := base58.Encode(rpvc)
+		spaddr := (string(paddr))
+		regspaddr := regex.MatchString(spaddr)
 		fmt.Println("Parent Skycoin Address: ", string(paddr))
+		fmt.Println("Parent address is valid: ", regspaddr)
+
 	} else {
 		if hbl == 24 {
 			hbl = len(aux2hb)
@@ -51,7 +57,10 @@ func main() {
 			chk := rpvh[:4]
 			rpvc := append(rmdvb, chk...)
 			paddr := base58.Encode(rpvc)
+			spaddr := (string(paddr))
+			regspaddr := regex.MatchString(spaddr)
 			fmt.Println("Parent Skycoin Address: ", string(paddr))
+			fmt.Println("Parent address is valid: ", regspaddr)
 		}
 	}
 
