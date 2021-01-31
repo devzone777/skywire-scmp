@@ -99,9 +99,9 @@ func main() {
         Shellout(reboot)
 	*/
 
-	//exec.Command("reboot")
+	Shellout("pkill wpa_supplicant & screen -dmS skywire-wpa-supplicant wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0")
 
 	}
 
-exec.Command("reboot")
+//exec.Command("reboot")
 }
