@@ -77,7 +77,7 @@ func main() {
 	}
 
 	//fmt.Println("ssid 1 length: ", len(ssid1))
-	fmt.Println("\033[32mScanning for Skywire networks\033[0m")
+	//fmt.Println("\033[32mScanning for Skywire networks\033[0m")
 	time.Sleep(4 * time.Second)
 
 	if len(ssid1) == 32 && regex.MatchString(ssid1) == true {
