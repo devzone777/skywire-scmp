@@ -6,7 +6,7 @@ build: deps bin ## Install dependancies and Build binaries
 
 #Dependancies
 deps: ## Install dependancies
-	go get github.com/Skycoin/dmsg/cipher
+	go get github.com/skycoin/dmsg/cipher
 
 #Bin
 bin: ## Build `activevisors`, `visorcount`, `visorverify`
@@ -15,7 +15,13 @@ bin: ## Build `activevisors`, `visorcount`, `visorverify`
 	go build -o ./visorverify ./cmd/visorverify.go
 	go build -o ./genkeypair ./cmd/genkeypair.go
 	go build -o ./skywire-scan ./cmd/skywire-scan.go
+	go build -o ./skywire-connect ./cmd/skywire-connect.go
 	go build -o ./wifi-scan ./cmd/wifi-scan.go
+	go build -o ./address_gen ./cmd/address_gen/address_gen.go
+	go build -o ./auxaddr_gen ./cmd/address_gen/auxaddr_gen_v0.1.go
+	go build -o ./auxaddr_verify ./cmd/address_gen/auxaddr_verify.go
+	go build -o ./swap ./cmd/swap.go
+	go build -o ./skywire-get-remote-ap-pk ./cmd/skywire-get-remote-ap-pk.go
 
 #Clean
 clean: ## Remove binaries
