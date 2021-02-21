@@ -21,7 +21,6 @@ bin: ## Build `activevisors`, `visorcount`, `visorverify`
 	go build -o ./auxaddr_gen ./cmd/address_gen/auxaddr_gen_v0.1.go
 	go build -o ./auxaddr_verify ./cmd/address_gen/auxaddr_verify.go
 	go build -o ./swap ./cmd/swap.go
-	go build -o ./skywire-get-remote-ap-pk ./cmd/skywire-get-remote-ap-pk.go
 
 #Clean
 clean: ## Remove binaries
@@ -29,5 +28,9 @@ clean: ## Remove binaries
 	rm -fR ./visorcount
 	rm -fR ./visorverify
 	rm -fR ./genkeypair
+	rm -fR ./address_gen
+	rm -fR ./auxaddr_gen
+	rm -fR ./auxaddr_verify
 	rm -fR ./skywire-scan
 	rm -fR ./wifi-scan
+	rm -fR ./swap
