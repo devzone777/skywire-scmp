@@ -24,12 +24,13 @@ func Shellout(command string) (error, string, string) {
 
 func main() {
 	rapip := os.Args[1] //Shellout("ip route show 0.0.0.0/0 dev wlan0 | cut -d\\  -f3")
+	//fmt.Println("rapip: ", rapip)
 	path := fmt.Sprintf(`"%s:5454/api/v1/Env"`, rapip)
-
+	//fmt.Println()
 	//resp := "[{'Error, check ip address of remote AP' err}]"
 
-	_, resp, _ = Shellout(fmt.Sprintf("curl %s", path))
-
+	_, resp, _ := Shellout(fmt.Sprintf("curl %s", path))
+	fmt.Println(resp)
 	tl := strings.Trim(resp, "[{")
 	tr := strings.Trim(tl, "}]")
 	sf := strings.Fields(tr)
